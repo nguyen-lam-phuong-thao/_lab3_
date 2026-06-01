@@ -1,0 +1,10 @@
+[2026-06-01T09:13:15.475587+00:00]
+intent: summarize
+status: success
+user: Giới thiệu Nam Cao
+bot: Nam Cao xuất hiện 3 lần trong dataset, trải trên các thể loại truyện ngắn và khu vực Việt Nam. Giai đoạn sáng tác được ghi nhận: 1941-1943. Một số tác phẩm tiêu biểu trong bộ dữ liệu: Chí Phèo, Lão Hạc, Đời thừa.
+[2026-06-01T09:13:27.382043+00:00]
+intent: summarize
+status: success
+user: Giới thiệu Nam Cao
+bot: Nam Cao xuất hiện 3 lần trong dataset, trải trên các thể loại truyện ngắn và khu vực Việt Nam. Giai đoạn sáng tác được ghi nhận: 1941-1943. Một số tác phẩm tiêu biểu trong bộ dữ liệu: Chí Phèo, Lão Hạc, Đời thừa.

@@ -8,3 +8,18 @@ intent: summarize
 status: success
 user: Giới thiệu Nam Cao
 bot: Nam Cao xuất hiện 3 lần trong dataset, trải trên các thể loại truyện ngắn và khu vực Việt Nam. Giai đoạn sáng tác được ghi nhận: 1941-1943. Một số tác phẩm tiêu biểu trong bộ dữ liệu: Chí Phèo, Lão Hạc, Đời thừa.
+[2026-06-01T09:33:52.311571+00:00]
+intent: summarize
+status: success
+user: Giới thiệu Nam Cao
+bot: Nam Cao xuất hiện 3 lần trong dataset, trải trên các thể loại truyện ngắn và khu vực Việt Nam. Giai đoạn sáng tác được ghi nhận: 1941-1943. Một số tác phẩm tiêu biểu trong bộ dữ liệu: Chí Phèo, Lão Hạc, Đời thừa.
+[2026-06-01T09:33:52.311898+00:00]
+intent: recommend
+status: success
+user: Đề xuất vài bài thơ Việt Nam
+bot: Gợi ý theo metadata (thơ, Việt Nam):
+1. Truyện Kiều - Nguyễn Du | thơ | 1820 | Việt Nam
+2. Lục Vân Tiên - Nguyễn Đình Chiểu | thơ | 1864 | Việt Nam
+3. Từ ấy - Tố Hữu | thơ | 1938 | Việt Nam
+4. Việt Bắc - Tố Hữu | thơ | 1954 | Việt Nam
+5. Tây Tiến - Quang Dũng | thơ | 1948 | Việt Nam

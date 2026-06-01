@@ -72,13 +72,10 @@ class MetadataChatbot:
                 "Bạn có thể thử theo tên tác phẩm, tên tác giả, thể loại hoặc khu vực."
             )
 
-        lines = ["Tôi tìm thấy các mục phù hợp trong metadata:"]
-        for index, hit in enumerate(hits, start=1):
-            record = hit.record
-            lines.append(
-                f"{index}. {record.title} - {record.author} | {record.genre} | {record.display_year} | {record.region}"
-            )
-        base_answer = "\n".join(lines)
+        base_answer = self._format_records(
+            intro="Tôi tìm thấy các mục phù hợp trong metadata:",
+            records=[hit.record for hit in hits],
+        )
 
         prompt = textwrap.dedent(
             f"""
@@ -139,12 +136,7 @@ class MetadataChatbot:
                 scope = ", ".join(part for part in [genre, region] if part)
                 intro = f"Gợi ý theo metadata ({scope}):" if scope else "Đây là một số gợi ý từ dataset:"
 
-        body = [intro]
-        for index, record in enumerate(recommendations, start=1):
-            body.append(
-                f"{index}. {record.title} - {record.author} | {record.genre} | {record.display_year} | {record.region}"
-            )
-        base_answer = "\n".join(body)
+        base_answer = self._format_records(intro=intro, records=recommendations)
 
         prompt = textwrap.dedent(
             f"""
@@ -173,3 +165,11 @@ class MetadataChatbot:
 
         content = (result.get("content") or "").strip()
         return content or fallback
+
+    def _format_records(self, intro: str, records: list) -> str:
+        lines = [intro]
+        for index, record in enumerate(records, start=1):
+            lines.append(
+                f"{index}. {record.title} - {record.author} | {record.genre} | {record.display_year} | {record.region}"
+            )
+        return "\n".join(lines)

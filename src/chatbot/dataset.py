@@ -4,7 +4,7 @@ import csv
 import re
 import unicodedata
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import List, Optional
 
 from src.chatbot.models import SearchHit, WorkRecord
 
@@ -379,6 +379,3 @@ class MetadataRepository:
         if hits:
             return [hit.record for hit in hits]
         return self.records[:top_k]
-
-    def sample_titles(self, records: Iterable[WorkRecord], limit: int = 5) -> str:
-        return ", ".join(record.title for record in list(records)[:limit])

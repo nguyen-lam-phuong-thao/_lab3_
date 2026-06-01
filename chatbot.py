@@ -16,13 +16,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
 
+load_dotenv(PROJECT_ROOT / ".env")
+
 from src.chatbot.dataset import MetadataRepository
 from src.chatbot.service import MetadataChatbot
 from src.core.provider_factory import build_provider
 
 
 def build_chatbot() -> MetadataChatbot:
-    load_dotenv(PROJECT_ROOT / ".env")
     dataset_path = os.getenv("DATASET_PATH", "./dataset_tac_pham_van_hoc_wikipedia_100.csv")
     repository = MetadataRepository(PROJECT_ROOT / dataset_path)
     provider = build_provider()
